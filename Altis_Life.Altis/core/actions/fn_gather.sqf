@@ -42,10 +42,15 @@ for "_i" from 0 to 2 do
 	sleep 2.5;
 };
 
-if(([true,_gather,_diff] call life_fnc_handleInv)) then
-{
-	_itemName = [([_gather,0] call life_fnc_varHandle)] call life_fnc_varToStr;
-	titleText[format[localize "STR_NOTF_Gather_Success",_itemName,_diff],"PLAIN"];
-};
+_chance = round (random 10);
+if(_chance < 5) exitWith {titleText[format["Du hast daneben gegriffen",_chance],"PLAIN"]};
+if(_chance > 5) then 
+	{
+	if(([true,_gather,_diff] call life_fnc_handleInv)) then
+		{
+		_itemName = [([_gather,0] call life_fnc_varHandle)] call life_fnc_varToStr;
+		titleText[format[localize "STR_NOTF_Gather_Success",_itemName,_diff],"PLAIN"];
+		};
+	};
 
 life_action_inUse = false;
