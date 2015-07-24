@@ -37,14 +37,17 @@ if(_diff == 0) exitWith {hint localize "STR_NOTF_InvFull"};
 life_action_inUse = true;
 for "_i" from 0 to 2 do
 {
+	[player,"harvest"] call life_fnc_globalSound;
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 	waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
 	sleep 2.5;
 };
 
 _chance = round (random 10);
-if(_chance < 5) exitWith {titleText[format["Du hast daneben gegriffen",_chance],"PLAIN"]};
-if(_chance > 5) then 
+if(_chance < 1) exitWith 	{titleText[format["Du hast daneben gegriffen",_chance],"PLAIN"];};
+if(_chance < 2) exitWith 	{titleText[format["Du hast es fallen gelassen",_chance],"PLAIN"]};
+if(_chance < 3) exitWith 	{titleText[format["Du hast in Scheiße gegriffen",_chance],"PLAIN"]};
+if(_chance > 4) then 
 	{
 	if(([true,_gather,_diff] call life_fnc_handleInv)) then
 		{

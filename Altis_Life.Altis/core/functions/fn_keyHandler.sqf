@@ -241,14 +241,16 @@ switch (_code) do
 						} else {
 							[[_veh,0],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};
-						systemChat localize "STR_MISC_VehUnlock";
+						//systemChat localize "STR_MISC_VehUnlock";
+						[player,"Car_Unlock"] call life_fnc_globalSound;
 					} else {
 						if(local _veh) then {
 							_veh lock 2;
 						} else {
 							[[_veh,2],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 						};	
-						systemChat localize "STR_MISC_VehLock";
+						//systemChat localize "STR_MISC_VehLock";
+						[player,"Car_Lock"] call life_fnc_globalSound;
 					};
 				};
 			};
@@ -323,7 +325,7 @@ switch (_code) do
 	};
 	
 	
-	//disable F-Keys for cheating inclusive Add on Steam Screenshots ;) Free adds Yeah!!
+	//disable F-Keys
 	case 59: // F1
 	{
 		closeDialog 0;
@@ -404,7 +406,7 @@ switch (_code) do
 	case 88: // F12
 	{
 		closeDialog 0;
-		//hint "[GER] RPE Evolution 31.214.198.106:2302";
+		//hint "F12 - Computer sagt Nein";
 		_handled = true;
 	}; 
 };

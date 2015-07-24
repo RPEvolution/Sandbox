@@ -2038,6 +2038,7 @@
  		<Key ID="STR_NOTF_Gather_Success">
 			<Original>You have gathered %2 %1(s)</Original>
 			<English>You have gathered %2 %1(s)</English>
+			<German>Du hast %2 %1(s) gesammelt</German>
 		</Key>
 		<Key ID="STR_NOTF_GatherVeh">
 			<Original>You can't gather from inside a car!</Original>

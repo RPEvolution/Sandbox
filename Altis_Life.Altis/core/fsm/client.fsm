@@ -54,7 +54,7 @@ class FSM
     class Split
     {
       name = "Split";
-      init = /*%FSM<STATEINIT""">*/"systemChat format[localize ""STR_FSM_Paycheck"",(call life_paycheck_period)];"/*%FSM</STATEINIT""">*/;
+      init = /*%FSM<STATEINIT""">*//*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {

@@ -1,4 +1,4 @@
-/*[] spawn  {
+[] spawn  {
 	private["_fnc_food","_fnc_water"];
 	_fnc_food = 
 	{
@@ -11,7 +11,7 @@
 		switch(life_hunger) do {
 			case 30: {hint localize "STR_NOTF_EatMSG_1";};
 			case 20: {hint localize "STR_NOTF_EatMSG_2";};
-			case 10: {hint localize "STR_NOTF_EatMSG_3";player setFatigue 1;};
+			case 10: {hint localize "STR_NOTF_EatMSG_3";};
 			};
 		};
 	};
@@ -27,8 +27,8 @@
 			switch(life_thirst) do 
 			{
 				case 30: {hint localize "STR_NOTF_DrinkMSG_1";};
-				case 20: {hint localize "STR_NOTF_DrinkMSG_2"; player setFatigue 1;};
-				case 10: {hint localize "STR_NOTF_DrinkMSG_3"; player setFatigue 1;};
+				case 20: {hint localize "STR_NOTF_DrinkMSG_2";};
+				case 10: {hint localize "STR_NOTF_DrinkMSG_3";};
 			};
 		};
 	};
@@ -40,7 +40,7 @@
 		[] call _fnc_food;
 	};
 };
-/*
+
 [] spawn
 {
 	private["_bp","_load","_cfg"];
@@ -59,14 +59,14 @@
 	};
 };
 
-/*[] spawn
+[] spawn
 {
 	while {true} do
 	{
 		sleep 1.5;
 		if(life_carryWeight > life_maxWeight && !isForcedWalk player) then {
 			player forceWalk true;
-			player setFatigue 1;
+			//player setFatigue 1;
 			hint localize "STR_NOTF_MaxWeight";
 		} else {
 			if(isForcedWalk player) then {
@@ -74,7 +74,7 @@
 			};
 		};
 	};
-};*/
+};
 
 [] spawn  
 {
@@ -95,8 +95,8 @@
 				if(_walkDis == _MaxWalk) then
 				{
 					_walkDis = 0;
-					//life_thirst = life_thirst - 5;
-					//life_hunger = life_hunger - 5;
+					life_thirst = life_thirst - 5;
+					life_hunger = life_hunger - 5;
 					[] call life_fnc_hudUpdate;
 				};
 			};
