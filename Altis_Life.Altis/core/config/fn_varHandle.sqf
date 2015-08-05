@@ -18,6 +18,7 @@ switch (_mode) do
 		{
 			case "oilu": {"life_inv_oilu"};
 			case "oilp": {"life_inv_oilp"};
+			case "fiber": {"life_inv_fiber"};
 			case "heroinu": {"life_inv_heroinu"};
 			case "heroinp": {"life_inv_heroinp"};
 			case "cannabis": {"life_inv_cannabis"};
@@ -74,6 +75,7 @@ switch (_mode) do
 		{
 			case "life_inv_oilu": {"oilu"};
 			case "life_inv_oilp": {"oilp"};
+			case "life_inv_fiber": {"fiber"};
 			case "life_inv_heroinu": {"heroinu"};
 			case "life_inv_heroinp": {"heroinp"};
 			case "life_inv_cannabis": {"cannabis"};

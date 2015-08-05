@@ -40,9 +40,9 @@ for "_i" from 0 to 2 do
 };	
 
 _chance = round (random 10);
-if(_chance < 1) exitWith 	{titleText[format["Du hast daneben geschlagen",_chance],"PLAIN"]};
-if(_chance < 2) exitWith 	{titleText[format["Dir ist die Spitzhacke aus der Hand gefallen",_chance],"PLAIN"]};
-if(_chance < 3) exitWith 	{titleText[format["Die spitze Seite muss nach vorne",_chance],"PLAIN"];};
+if(_chance < 1) exitWith 	{titleText[format["Du hast daneben gehauen",_chance],"PLAIN"];};
+if(_chance < 2) exitWith 	{titleText[format["Die spitze Kante muss nach vorne",_chance],"PLAIN"]};
+if(_chance < 3) exitWith 	{titleText[format["Du hast dir gegen das Knie geschlagen",_chance],"PLAIN"]};
 if(_chance > 4) then 
 	{
 	if(([true,_mine,_diff] call life_fnc_handleInv)) then

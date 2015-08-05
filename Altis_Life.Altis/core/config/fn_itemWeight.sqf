@@ -12,6 +12,7 @@ if(_item == "") exitWith {};
 switch (_item) do
 {
 	case "oilu": {7};
+	case "fiber": {1};
 	case "oilp": {6};
 	case "heroinu": {6};
 	case "heroinp": {4};

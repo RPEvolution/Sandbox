@@ -15,6 +15,7 @@ switch (_var) do
 	//Virtual Inventory Items
 	case "life_inv_oilu": {(localize "STR_Item_OilU")};
 	case "life_inv_oilp": {(localize "STR_Item_OilP")};
+	case "life_inv_fiber": {"Fasern"};
 	case "life_inv_heroinu": {(localize "STR_Item_HeroinU")};
 	case "life_inv_heroinp": {(localize "STR_Item_HeroinP")};
 	case "life_inv_cannabis": {(localize "STR_Item_Cannabis")};
@@ -63,18 +64,8 @@ switch (_var) do
 	case "life_inv_storagebig": {(localize "STR_Item_StorageBL")};
 	
 	//License Block
-	case "license_civ_driver": {(localize "STR_License_Driver")};
-	case "license_civ_air": {(localize "STR_License_Pilot")};
 	case "license_civ_heroin": {(localize "STR_License_Heroin")};
 	case "license_civ_oil": {(localize "STR_License_Oil")};
-	case "license_civ_dive": {(localize "STR_License_Diving")};
-	case "license_civ_boat": {(localize "STR_License_Boat")};
-	case "license_civ_gun": {(localize "STR_License_Firearm")};
-	case "license_cop_air": {(localize "STR_License_Pilot")};
-	case "license_cop_swat": {(localize "STR_License_Swat")};
-	case "license_cop_cg": {(localize "STR_License_CG")};
-	case "license_civ_rebel": {(localize "STR_License_Rebel")};
-	case "license_civ_truck": {(localize "STR_License_Truck")};
 	case "license_civ_diamond": {(localize "STR_License_Diamond")};
 	case "license_civ_copper": {(localize "STR_License_Copper")};
 	case "license_civ_iron": {(localize "STR_License_Iron")};
@@ -83,6 +74,4 @@ switch (_var) do
 	case "license_civ_coke": {(localize "STR_License_Cocaine")};
 	case "license_civ_marijuana": {(localize "STR_License_Marijuana")};
 	case "license_civ_cement": {(localize "STR_License_Cement")};
-	case "license_med_air": {(localize "STR_License_Pilot")};
-	case "license_civ_home": {(localize "STR_License_Home")};
 };

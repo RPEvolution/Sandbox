@@ -93,4 +93,4 @@ switch (true) do
 	};
 };
 titleText[format[localize "STR_ISTR_Jerry_Success",_displayName],"PLAIN"];
-[true,"fuelE",1] call life_fnc_handleInv;
+//[true,"fuelE",1] call life_fnc_handleInv;

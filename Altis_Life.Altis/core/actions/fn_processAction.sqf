@@ -14,16 +14,16 @@ if(isNull _vendor OR _type == "" OR (player distance _vendor > 10)) exitWith {};
 //unprocessed item,processed item, cost if no license,Text to display (I.e Processing  (percent) ..."
 _itemInfo = switch (_type) do
 {
-	case "oil": {["oilu","oilp",1200,(localize "STR_Process_Oil")];};
-	case "diamond": {["diamond","diamondc",1350,(localize "STR_Process_Diamond")];};
-	case "heroin": {["heroinu","heroinp",1750,(localize "STR_Process_Heroin")];};
-	case "copper": {["copperore","copper_r",750,(localize "STR_Process_Copper")];};
-	case "iron": {["ironore","iron_r",1120,(localize "STR_Process_Iron")];};
-	case "sand": {["sand","glass",650,(localize "STR_Process_Sand")];};
-	case "salt": {["salt","salt_r",450,(localize "STR_Process_Salt")];};
-	case "cocaine": {["cocaine","cocainep",1500,(localize "STR_Process_Cocaine")];};
-	case "marijuana": {["cannabis","marijuana",500,(localize "STR_Process_Marijuana")];};
-	case "cement": {["rock","cement",350,(localize "STR_Process_Cement")];};
+	case "oil": {["oilu","fuelF",0,(localize "STR_Process_Oil")];};
+	case "diamond": {["diamond","diamondc",0,(localize "STR_Process_Diamond")];};
+	case "heroin": {["heroinu","heroinp",0,(localize "STR_Process_Heroin")];};
+	case "copper": {["copperore","copper_r",0,(localize "STR_Process_Copper")];};
+	case "iron": {["ironore","iron_r",0,(localize "STR_Process_Iron")];};
+	case "sand": {["sand","glass",0,(localize "STR_Process_Sand")];};
+	case "salt": {["salt","salt_r",0,(localize "STR_Process_Salt")];};
+	case "cocaine": {["cocaine","cocainep",0,(localize "STR_Process_Cocaine")];};
+	case "marijuana": {["cannabis","marijuana",0,(localize "STR_Process_Marijuana")];};
+	case "cement": {["rock","cement",0,(localize "STR_Process_Cement")];};
 	default {[];};
 };
 
@@ -86,7 +86,7 @@ if(_hasLicense) then
 	
 	while{true} do
 	{
-		sleep  0.9;
+		sleep  0.3;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
